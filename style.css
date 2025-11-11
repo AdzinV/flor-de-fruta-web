@@ -1,0 +1,165 @@
+/* Añadir al inicio del style.css para transiciones suaves */
+body a, .cta-button, .social-button {
+    transition: all 0.3s ease;
+}
+/* --- 1. AJUSTE DEL BODY (FONDO NEGRO) --- */
+body {
+    font-family: sans-serif; 
+    background-color: #000000; /* Fondo Negro */
+    color: #F5F5DC; /* El color de la letra Beige se mantiene */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 1. AJUSTE DEL HEADER (CABECERA) a VERDE JADE OSCURO --- */
+header {
+    background-color: #014421; /* Fondo Verde Jade Oscuro */
+    color: #F5F5DC; /* Texto en Beige para ALTO CONTRASTE */
+    padding: 60px 20px; 
+    text-align: center;
+}
+
+/* --- Ajuste del título H1 en el Header (a Beige) --- */
+header h1 {
+    font-size: 2.5em; 
+    margin-bottom: 10px;
+    color: #F5F5DC; /* Título H1 a Beige sobre el fondo Verde Jade */
+}
+
+/* --- 2. AJUSTE DE TÍTULOS (H2) --- */
+section h2 {
+    color: white; /* Cambiado a BLANCO (mantiene alto contraste con el negro) */
+    border-bottom: 2px solid #333; /* La línea divisoria se mantiene oscura */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- 3. AJUSTE DEL BOTÓN (CTA) en Granate --- */
+.cta-button {
+    display: inline-block;
+    background-color: #900000; /* Color Granate Profundo */
+    color: white; /* Texto blanco para ALTO CONTRASTE (es mejor que el negro sobre este rojo) */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #C00000; /* Un rojo rubí más brillante al pasar el mouse */
+}
+/* ---------------------------------- */
+/* 5. Estilo de Productos (Responsive) */
+/* ---------------------------------- */
+.product-grid {
+    display: flex; /* Activa Flexbox */
+    gap: 40px; /* Espacio entre los productos */
+    justify-content: space-around; /* Distribuye el espacio entre los productos */
+    flex-wrap: wrap; /* Permite que los productos pasen a una nueva línea en móviles */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.product-item {
+    /* ... otros estilos */
+    border: 1px solid #333; /* Borde gris oscuro */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra clara */
+}
+
+.product-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+/* ---------------------------------- */
+/* 6. Diseño Responsive (Para Móviles) */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    /* Ajusta los elementos principales */
+    section {
+        padding: 30px 10px; /* Reduce el relleno en móvil */
+    }
+
+    /* Hace que los productos se apilen verticalmente */
+    .product-item {
+        flex-basis: 100%; /* Ocupa el 100% del ancho */
+        max-width: none;
+    }
+
+    /* Centra la barra de navegación en móviles */
+    nav a {
+        display: block; /* Muestra los enlaces de navegación uno debajo del otro */
+        margin: 10px 0;
+    }
+}
+/* --- 7. ESTILO DE REDES SOCIALES (FOOTER) --- */
+.social-icons {
+    margin: 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid #333; /* Línea separadora sutil */
+}
+
+.social-button {
+    display: inline-flex; /* Permite centrar el texto/icono */
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%; /* Forma de círculo */
+    text-decoration: none;
+    font-weight: bold;
+    color: #F5F5DC; /* Color de letra Beige */
+    transition: background-color 0.3s;
+}
+
+/* Colores temáticos de las redes */
+.social-button.youtube {
+    background-color: #FF0000; /* Rojo de YouTube */
+}
+
+.social-button.tiktok {
+    background-color: #000000; /* Negro de TikTok (puedes usar el color de acento si prefieres) */
+    border: 2px solid white; 
+}
+
+.social-button.youtube:hover {
+    background-color: #CC0000;
+}
+
+.social-button.tiktok:hover {
+    background-color: #222222;
+}
+/* --- Añadir nuevos colores temáticos de las redes --- */
+
+/* Instagram Color */
+.social-button.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.social-button.instagram i {
+    color: white; 
+}
+.social-button.instagram:hover {
+    opacity: 0.8;
+}
+
+/* Facebook Color */
+.social-button.facebook {
+    background-color: #1877F2;
+}
+.social-button.facebook:hover {
+    background-color: #0c6ad9;
+}
+
+/* WhatsApp Color */
+.social-button.whatsapp {
+    background-color: #25D366;
+}
+.social-button.whatsapp:hover {
+    background-color: #1aa04e;
+}
