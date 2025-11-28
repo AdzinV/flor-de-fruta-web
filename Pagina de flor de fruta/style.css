@@ -1,0 +1,156 @@
+/*
+==================================================
+  SOLÚ HIBISCUS CRISTAL - HOJA DE ESTILOS PRINCIPAL
+==================================================
+*/
+
+/* 1. Variables Globales */
+:root {
+    --color-marca: #8B0000; /* Rojo Hibiscus */
+    --color-marca-hover: #C70039;
+    --color-fondo: #f9f9f9;
+    --color-fondo-claro: #fff;
+    --color-fondo-suave: #ffeaea; 
+    --color-texto: #333;
+    
+    /* COLORES NAVIDEÑOS */
+    --color-navidad-principal: #8B0000; /* Rojo */
+    --color-navidad-secundario: #006400; /* Verde */
+    --color-navidad-acento: #FFD700; /* Oro */
+
+    --color-footer: var(--color-navidad-secundario); /* El footer será verde */
+}
+
+/* 2. Estilos Base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1, h2, h3 {
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+/* 3. Navegación y Encabezado */
+header {
+    background-color: var(--color-fondo-claro);
+    padding: 15px 0;
+    /* Nuevo: Borde Dorado */
+    border-bottom: 2px solid var(--color-navidad-acento); 
+}
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: var(--color-navidad-secundario); /* Verde al pasar el mouse */
+}
+
+/* 4. Sección Hero (Portada) */
+.hero {
+    /* REEMPLAZA 'URL_DE_TU_IMAGEN.jpg' */
+    background: #111 url('URL_DE_TU_IMAGEN.jpg') center center/cover no-repeat;
+    color: #fff;
+    padding: 100px 20px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero h1 {
+    color: #fff;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.cta-button {
+    background-color: var(--color-marca);
+    color: #fff;
+    /* ... otros estilos ... */
+    
+    /* Nuevo: Sombra sutil dorada */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); 
+}
+.cta-button:hover {
+    background-color: var(--color-marca-hover);
+    box-shadow: 0 0 20px var(--color-navidad-acento);
+}
+.cta-button:hover {
+    background-color: var(--color-marca-hover);
+}
+
+/* 5. Propuesta de Valor (Index) */
+.value-prop {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.value-item {
+    flex-basis: 30%;
+    background-color: var(--color-fondo-claro);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.value-item h3 {
+    color: var(--color-marca);
+    font-size: 1.5em;
+}
+
+/* 6. Estilos para Páginas Detalladas (Política y Ciencia) */
+.content-detail {
+    /* ... otros estilos ... */
+    /* Cambia el borde de la izquierda a verde */
+    border-left: 5px solid var(--color-navidad-secundario); 
+    /* ... otros estilos ... */
+}
+.content-detail h2 {
+    color: #555;
+    margin-top: 30px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+.return-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+.seccion-clave {
+    background-color: var(--color-fondo-suave);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* 7. Pie de Página */
+footer {
+    background-color: var(--color-footer);
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+footer a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: var(--color-marca);
+}
